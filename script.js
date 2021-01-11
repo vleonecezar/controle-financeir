@@ -26,7 +26,7 @@ const addTransactionIntoDOM = ({ id, name, amount }) => {
   	${name} <span>${operator} R$ ${amountWithoutOperator}</span>
 		<button class="delete-btn" onClick="removeTransaction(${id})">x</button>
   `
-  transactionsUl.prepend(li)
+	transactionsUl.prepend(li)
 }
 
 const getTotal = transactionsAmount => transactionsAmount
@@ -43,6 +43,13 @@ const getExpense = transactionsAmount => Math.abs(transactionsAmount
 	.reduce((acc, transaction) => acc + transaction, 0)
 	).toFixed(2)
 
+const totalColor = total => {
+	if (total < 0) {
+		return balanceDisplay.style.color = '#c0392b' 
+	}
+	balanceDisplay.style.color = '#2e75cc'
+}
+
 const updateBalanceValues = () => {
 	const transactionsAmount = transactions.map(({ amount }) => amount)
 	const total = getTotal(transactionsAmount)
@@ -52,6 +59,8 @@ const updateBalanceValues = () => {
 	balanceDisplay.textContent = `R$ ${total}`
 	incomeDisplay.textContent = `R$ ${income}`
 	expenseDisplay.textContent = `R$ ${expense}`
+
+	totalColor(total)
 }
 
 const init = () => {
@@ -65,11 +74,21 @@ const updateLocalStorege = () => {
 	localStorage.setItem('transactions', JSON.stringify(transactions)) 
 }
 
-const generateId = () => Math.round(Math.random() * 1000)
+const generateId = () => Math.round(Math.random() * transactions.length)
+
+const isUniqueId = () => {
+	const transactionIds = transactions.map(transaction => transaction.id)
+	let uniqueId = generateId()
+
+	while (transactionIds.includes(uniqueId))
+		uniqueId = generateId()
+	
+	return uniqueId
+}
 
 const addToTransactionsArray = (transactionName, transactionAmount) => {
 	transactions.push({
-		id: generateId(), 
+		id: isUniqueId(), 
 		name: transactionName, 
 		amount: Number(transactionAmount)
 	})
