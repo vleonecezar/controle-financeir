@@ -30,11 +30,11 @@ Todos os itens são armazenadas no localStorage do navegador, permitindo que per
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="ControleDeGastos" src="./assets/readme/gif.gif" width="400px">
+  <img alt="ControleDeGastos" src="./assets/readme/gif.gif" width="600px">
 </p>
 
 ### Mobile
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="ControleDeGastos" src="./assets/readme/mobile.jpeg" width="400px">
+  <img alt="ControleDeGastos" src="./assets/readme/mobile.jpeg" width="300px">
 </p>
