@@ -11,7 +11,7 @@ Controle de gastos é uma aplicação web onde se pode adicionar e remover recei
 Através do formulário, o usuário consegue adicionar receitas e despesas e logo em seguida vê-las na lista de transações. Cada item da lista tem uma borda no canto direito com sua respectiva cor (verde para receitas e vermelha para despesas).<br/>
 Um ID único é gerado para cada item de acordo com o length do array, permitindo a exclusão do mesmo e evitando multiplas exclusões por vez. Para excluir, basta posicionar o mouse em cima do item e aparecerá um " X ".
 
-Todos os itens são armazenadas no localStorage do navegador, permitindo que permaneçam mesmo havendo um reload ou fechamento da pagina.
+Todos os itens são armazenados no localStorage do navegador, permitindo que permaneçam mesmo havendo um reload ou fechamento da pagina.
 
 ---
 
