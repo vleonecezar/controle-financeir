@@ -18,30 +18,34 @@ const removeTransaction = id => {
 const addTransactionIntoDOM = ({ id, name, amount }) => {
   const operator = amount < 0 ? '-' : '+'
   const CSSClass = amount < 0 ? 'minus' : 'plus'
-  const amountWithoutOperator = Math.abs(amount).toFixed(2)
-  const li = document.createElement('li')
-    
-  li.classList.add(CSSClass)
-  li.innerHTML = `
-  	${name} <span>${operator} R$ ${amountWithoutOperator}</span>
+	const amountWithoutOperator = Math.abs(amount).toLocaleString('pt-BR', BRL())
+
+	const li = document.createElement('li')
+	
+	let liContent = `
+		${name.toLowerCase()} <span>${operator} ${amountWithoutOperator}</span>
 		<button class="delete-btn" onClick="removeTransaction(${id})">x</button>
   `
+  li.classList.add(CSSClass)
+  li.innerHTML = liContent
 	transactionsUl.prepend(li)
 }
 
+const BRL = () => ({style: 'currency', currency: 'BRL'})  // Transform into BRL currency
+
 const getTotal = transactionsAmount => transactionsAmount
 	.reduce((acc, transaction) => acc + transaction, 0)
-	.toFixed(2)
+	.toLocaleString('pt-BR', BRL())
 
 const getIncome = transactionsAmount => transactionsAmount
 	.filter(transaction => transaction > 0)
 	.reduce((acc, transaction) => acc + transaction, 0)
-	.toFixed(2)
-
+	.toLocaleString('pt-BR', BRL())
+	
 const getExpense = transactionsAmount => Math.abs(transactionsAmount
 	.filter(transaction => transaction < 0)
-	.reduce((acc, transaction) => acc + transaction, 0)
-	).toFixed(2)
+	.reduce((acc, transaction) => acc + transaction, 0))
+	.toLocaleString('pt-BR', BRL())
 
 const totalColor = total => {
 	if (total < 0) {
@@ -56,9 +60,9 @@ const updateBalanceValues = () => {
 	const income = getIncome(transactionsAmount)
 	const expense = getExpense(transactionsAmount)
 
-	balanceDisplay.textContent = `R$ ${total}`
-	incomeDisplay.textContent = `R$ ${income}`
-	expenseDisplay.textContent = `R$ ${expense}`
+	balanceDisplay.textContent = total
+	incomeDisplay.textContent = income
+	expenseDisplay.textContent = expense
 
 	totalColor(total)
 }
@@ -81,7 +85,7 @@ const isUniqueId = () => {
 	let uniqueId = generateId()
 
 	while (transactionIds.includes(uniqueId))
-		uniqueId = generateId()
+	uniqueId = generateId()
 	
 	return uniqueId
 }
