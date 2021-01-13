@@ -23,7 +23,8 @@ const addTransactionIntoDOM = ({ id, name, amount }) => {
 	const li = document.createElement('li')
 	
 	let liContent = `
-		${name.toLowerCase()} <span>${operator} ${amountWithoutOperator}</span>
+		${name.toLowerCase()} <span>${operator} ${amountWithoutOperator
+		.toLocaleString('pt-BR', BRL())}</span>
 		<button class="delete-btn" onClick="removeTransaction(${id})">x</button>
   `
   li.classList.add(CSSClass)
@@ -35,17 +36,14 @@ const BRL = () => ({style: 'currency', currency: 'BRL'})  // Transform into BRL 
 
 const getTotal = transactionsAmount => transactionsAmount
 	.reduce((acc, transaction) => acc + transaction, 0)
-	.toLocaleString('pt-BR', BRL())
 
 const getIncome = transactionsAmount => transactionsAmount
 	.filter(transaction => transaction > 0)
 	.reduce((acc, transaction) => acc + transaction, 0)
-	.toLocaleString('pt-BR', BRL())
 	
 const getExpense = transactionsAmount => Math.abs(transactionsAmount
 	.filter(transaction => transaction < 0)
 	.reduce((acc, transaction) => acc + transaction, 0))
-	.toLocaleString('pt-BR', BRL())
 
 const totalColor = total => {
 	if (total < 0) {
@@ -60,11 +58,11 @@ const updateBalanceValues = () => {
 	const income = getIncome(transactionsAmount)
 	const expense = getExpense(transactionsAmount)
 
-	balanceDisplay.textContent = total
-	incomeDisplay.textContent = income
-	expenseDisplay.textContent = expense
-
 	totalColor(total)
+
+	balanceDisplay.textContent = total.toLocaleString('pt-BR', BRL())
+	incomeDisplay.textContent = income.toLocaleString('pt-BR', BRL())
+	expenseDisplay.textContent = expense.toLocaleString('pt-BR', BRL())
 }
 
 const init = () => {
