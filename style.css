@@ -184,7 +184,15 @@ form {
   }
 
   .inc-exp-container {
-    width: 300px;
+    width: 340px;
+  }
+
+  .money.plus {
+   margin-right: 10px;
+  }
+  
+  .money.minus {
+   margin-left: 10px;
   }
 
   .transactions-container {
