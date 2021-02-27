@@ -102,8 +102,8 @@ const cleanInputs = () => {
 	inputTransactionName.focus()
 }
 
-const handleFormSubmit = event => {
-	event.preventDefault()
+const handleFormSubmit = e => {
+	e.preventDefault()
 
 	const transactionName = inputTransactionName.value.trim() 
 	const transactionAmount = inputTransactionAmount.value.trim() 
