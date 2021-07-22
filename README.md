@@ -13,7 +13,7 @@ Um ID único é gerado para cada item de acordo com o length do array, permitind
 
 Todos os itens são armazenados no localStorage do navegador, permitindo que permaneçam mesmo havendo um reload ou fechamento da pagina.
 
-<p href="https://vleonecezar.github.io/controle-gastos/">CLIQUE AQUI PARA TESTAR</p>
+<a href="https://vleonecezar.github.io/controle-gastos/">CLIQUE AQUI PARA TESTAR</a>
 
 ---
 
