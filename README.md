@@ -1,25 +1,33 @@
-<h1>Controle de Gastos 🤑</h1>
+# Controle de Gastos 🤑
 
-<div style="text-align: justify;">
-Controle de gastos é uma aplicação web onde se pode adicionar e remover receitas e despesas do usuário.
-
-Através do formulário, o usuário consegue adicionar receitas e despesas e logo em seguida vê-las na lista de transações. Cada item da lista tem uma borda no canto direito com sua respectiva cor (verde para receitas e vermelha para despesas).<br/>
-Um ID único é gerado para cada item de acordo com o length do array, permitindo a exclusão do mesmo e evitando multiplas exclusões por vez. Para excluir, basta posicionar o mouse em cima do item e aparecerá um " X ".
-
-Todos os itens são armazenados no localStorage do navegador, permitindo que permaneçam mesmo havendo um reload ou fechamento da pagina. <br /><br />
-</div>
-
-## 🛠 Tecnologias
-
-- <code>HTML</code>
-- <code>CSS</code>
-- <code>JavaScript</code>
-
-## 💻 Screens 📱
 <div align="center">
-  
-![gif](https://user-images.githubusercontent.com/76831929/155423636-8d7feef9-2cae-4a18-912c-28da79a0ff4d.gif) </br>
-![mobile](https://user-images.githubusercontent.com/76831929/155423645-79551d1f-d310-4395-93c2-0aba3d1ef892.jpg)
-  
+  <a href="#-sobre">Sobre</a> | <a href="#-tecnologias">Tecnologias</a> | <a href="#-teste-a-aplicação">Teste a Aplicação</a> 
+</div>
+<br>
+
+<div align="center">
+
+![Web_capture_3-3-2022_223713_techsini com-removebg-preview](https://user-images.githubusercontent.com/76831929/156682610-79afc7d8-fe86-43a3-a114-476b6df14b76.png)
+
 </div>
 
+# 👨🏻‍🏫 Sobre
+Esta aplicação permite que você registre e tenha controle das suas receitas e despesas do dia a dia.
+
+# 🤳🏻 Funcionalidades
+
+- Registra receita.
+- Registra despesa (coloque o sinal de menos antes do número).
+- Remove registro de receita/despesa.
+
+# 🚀 Tecnologias
+
+- <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a> <br>
+
+# 👨🏻‍💻 Teste a aplicação
+Você pode testar a aplicação <a href="https://vleonecezar.github.io/controle-gastos/" target="_blank">clicando aqui</a>. <br>
+
+  ### Clone o repositório
+```
+  git clone https://github.com/vleonecezar/controle-gastos.git
+```
