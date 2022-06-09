@@ -1,33 +1,53 @@
-# Controle de Gastos 🤑
-
 <div align="center">
-  <a href="#-sobre">Sobre</a> | <a href="#-tecnologias">Tecnologias</a> | <a href="#-teste-a-aplicação">Teste a Aplicação</a> 
+  
+![189715](https://user-images.githubusercontent.com/76831929/172805499-62dc068f-3ce5-449c-a23d-e3f77f07a4d2.png)
+
+# Controle de Gastos
+
+#### Esta Aplicação Permite Que Você Registre e Tenha Controle das Suas Receitas e Despesas
+
+[Funcionalidades](#funcionalidades) • [Tecnologias](#tecnologias) • [Como Usar](#como-usar)
+
+![d14fe993-32e5-492b-8dc5-610857415260](https://user-images.githubusercontent.com/76831929/172805556-6799d110-a6c8-476e-9406-fdcc47905d02.png)
+
+### [Teste a Aplicação](https://vleonecezar.github.io/controle-gastos/)
+
 </div>
-<br>
 
-<div align="center">
+## Funcionalidades
 
-![Web_capture_3-3-2022_223713_techsini com-removebg-preview](https://user-images.githubusercontent.com/76831929/156682610-79afc7d8-fe86-43a3-a114-476b6df14b76.png)
+- Registra receitas e despesas 
+  - *use o sinal de menos antes do número para despesas.*
+- Remove registro de receitas/despesas.
 
-</div>
+## Tecnologias
 
-# 👨🏻‍🏫 Sobre
-Esta aplicação permite que você registre e tenha controle das suas receitas e despesas do dia a dia.
+- [JavaScript](https://www.w3schools.com/js/)
 
-# 🤳🏻 Funcionalidades
+## Como Usar
 
-- Registra receita.
-- Registra despesa (coloque o sinal de menos antes do número).
-- Remove registro de receita/despesa.
+> Para clonar e rodar essa aplicação, você vai precisar do Git instalado em seu computador.
 
-# 🚀 Tecnologias
+#### Clone o repositório
 
-- <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a> <br>
-
-# 👨🏻‍💻 Teste a aplicação
-Você pode testar a aplicação <a href="https://vleonecezar.github.io/controle-gastos/" target="_blank">clicando aqui</a>. <br>
-
-  ### Clone o repositório
 ```
   git clone https://github.com/vleonecezar/controle-gastos.git
 ```
+
+#### Abra o repositório
+
+```
+  cd controle-gastos
+```
+
+#### Rode a aplicação
+
+```
+  Abra o index.html em seu navegador
+```
+
+<hr />
+<div align="center">
+<a href="https://www.linkedin.com/in/vitor-leone-cezar/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="mailto:vleone.job@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+</div>
